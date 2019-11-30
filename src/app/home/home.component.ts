@@ -6,7 +6,7 @@ import { SolrServiceService } from 'src/app/solr-service.service';
 import { Pager } from 'src/app/interfaces/pager';
 import { Column } from 'src/app/interfaces/column';
 import { DataService } from '../data.service';
-
+import { EventEmitterService } from '../event-emitter.service';
 @Component({
   selector: 'app-root',
   templateUrl: './home.component.html',
@@ -17,7 +17,7 @@ export class HomeComponent {
   todoArray = [];
 
   config: Config;
-  constructor(private http: HttpClient, private configService: ConfigService, private solrService: SolrServiceService, private newData: DataService) {
+  constructor(private http: HttpClient, private configService: ConfigService, private solrService: SolrServiceService, private newData: DataService, private eventEmitterService: EventEmitterService) {
   }
   isHomePage = true
   url = '/solr/';
@@ -156,6 +156,7 @@ export class HomeComponent {
           // this.newData.changeMessage(JSON.parse(data));
           // this.newData.changeMessage(JSON.stringify(data));
         this.newData.changeState(data);
+        this.firstComponentFunction();
         },
         (err: HttpErrorResponse) => {
           if (err.error instanceof Error) {
@@ -187,5 +188,9 @@ export class HomeComponent {
           }
         });
     }
+  }
+
+  firstComponentFunction() {
+    this.eventEmitterService.onFirstComponentButtonClick();
   }
 }

@@ -2,11 +2,10 @@
   <div>
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li routerLink="/home" class="breadcrumb-item active" aria-current="page">Home</li>
+        <li routerLink="/home" (click)="backClicked()" class="breadcrumb-item active" aria-current="page">Home</li>
       </ol>
     </nav>
   </div>
-  <button (click)="showData()">Show</button>
   <form *ngIf="data && data.source._value.response.docs">
     <div class="form-group">
       <h1 class="text-center text-primary">Tweet Results</h1>
@@ -61,6 +60,17 @@
       </div>
     </div>
   </form>
+
+  <div class="my-container">
+    <ng-template #customLoadingTemplate>
+      <div class="custom-class">
+        <h3>
+        </h3>
+      </div>
+    </ng-template>
+
+    <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }" [template]="customLoadingTemplate"></ngx-loading>
+  </div>
 </div>
 
 

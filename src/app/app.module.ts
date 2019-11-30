@@ -11,7 +11,8 @@ import { DataService } from './data.service';
 import { ResultsComponent } from './results/results.component';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-
+import {EventEmitterService} from './event-emitter.service';
+import { NgxLoadingModule } from 'ngx-loading';
 const appRoutes: Routes = [
   { path: 'results', component: ResultsComponent },
   { path: 'home', component: HomeComponent }
@@ -29,9 +30,10 @@ const appRoutes: Routes = [
     FormsModule,
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    NgxLoadingModule.forRoot({})
   ],
-  providers: [ConfigService, SolrServiceService, DataService ],
+  providers: [ConfigService, SolrServiceService, DataService, EventEmitterService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
