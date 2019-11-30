@@ -1,0 +1,5 @@
+{
+    "solrUrl": "http://18.191.119.35:8983",
+    "indexName": "techproducts",
+    "returnFormat":"wt=json"
+  }

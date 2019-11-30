@@ -1,0 +1,67 @@
+<div>
+  <div>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li routerLink="/home" class="breadcrumb-item active" aria-current="page">Home</li>
+      </ol>
+    </nav>
+  </div>
+  <button (click)="showData()">Show</button>
+  <form *ngIf="data && data.source._value.response.docs">
+    <div class="form-group">
+      <h1 class="text-center text-primary">Tweet Results</h1>
+      <div style="display: block;" class="input-group-prepend">
+        <div *ngFor="let data of data.source._value.response.docs;index as rank">
+
+          <div class="modal fade" [attr.id]="rank" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="exampleModalLabel">Tweet Details</h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <b>Name:&nbsp;&nbsp;</b><a>{{data["user.name"]}}</a><br/>
+                  <b>Screen Name:&nbsp;&nbsp;</b><a>{{data["user.screen_name"]}}</a><br/>
+                  <b>User Status: </b>
+                  <a *ngIf="data['user.verified'][0] === true">Verfied User <i class="fa fa-check-circle" style="color:#00ACEE"></i></a>
+                  <a *ngIf="data['user.verified'][0] === false">Unverified User</a>
+                  <br/>
+                  <b>Location:&nbsp;&nbsp;</b><a>{{data["user.location"]}}</a><br/>
+                  <b>Country:&nbsp;&nbsp;</b><a>{{data.country}}</a><br/>
+                  <b>Tweet URL: </b>
+                  <a style="text-decoration: underline;color: blue;" href="https://twitter.com/{{data['user.screen_name'][0]}}/status/{{data.id}}" target="_blank">https://twitter.com/{{data["user.screen_name"][0]}}/status/{{data.id}}</a><br>
+                  <b>Time Stamp: </b><a>{{data.created_at}}</a><br/>
+                  <b>Likes:&nbsp;&nbsp;</b><a>{{data.favorite_count}}</a><br/>
+                  <b>Retweets:&nbsp;&nbsp;</b><a>{{data.retweet_count}}</a><br/>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data ="data"  data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div *ngIf="data.full_text">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <b>Tweet:&nbsp;&nbsp;</b><a>{{data.full_text}}</a><br/>
+              <b>User:&nbsp;&nbsp;</b><a>{{data["user.name"][0]}} </a>
+              <a *ngIf="data['user.verified'][0] === true"><i class="fa fa-check-circle" style="color:#00ACEE"></i></a>
+              <br/>
+              <button style="margin-top: 15px;" type="button" class="btn btn-info" data-toggle="modal" [attr.data-target]="'#'+rank">
+                Details
+              </button>
+            </li>
+          </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+
