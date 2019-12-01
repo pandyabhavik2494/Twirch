@@ -15,7 +15,8 @@ import {EventEmitterService} from './event-emitter.service';
 import { NgxLoadingModule } from 'ngx-loading';
 const appRoutes: Routes = [
   { path: 'results', component: ResultsComponent },
-  { path: 'home', component: HomeComponent }
+  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent }
 ];
 
 @NgModule({
