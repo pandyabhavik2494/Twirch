@@ -1,11 +1,14 @@
-<div>
-  <div>
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li routerLink="/home" (click)="backClicked()" class="breadcrumb-item active" aria-current="page">Home</li>
-      </ol>
-    </nav>
-  </div>
+ <nav class="navbar navbar-inverse">
+    <div class="container-fluid" style="margin-left: -36%">
+      <div class="navbar-header" style="cursor: pointer;">
+        <a routerLink="/home" (click)="backClicked()" class="navbar-brand">Search</a>
+        <a (click)="searchClicked()" class="navbar-brand">Search Results</a>
+        <a (click)="anaClicked()" class="navbar-brand">Tweet Analysis</a>
+      </div>
+    </div>
+  </nav>
+
+<div *ngIf="showAnalysis == false">
   <form *ngIf="data && data.source._value.response.docs">
     <div class="form-group">
       <h1 class="text-center text-primary">Tweet Results</h1>
@@ -35,6 +38,9 @@
                   <b>Time Stamp: </b><a>{{data.created_at}}</a><br/>
                   <b>Likes:&nbsp;&nbsp;</b><a>{{data.favorite_count}}</a><br/>
                   <b>Retweets:&nbsp;&nbsp;</b><a>{{data.retweet_count}}</a><br/>
+                  <b>Related News Articles: </b>
+                  <a *ngIf="data.tweet_urls"style="text-decoration: underline;color: blue;" href="{{data.tweet_urls[0]}}" target="_blank">{{data.tweet_urls}}</a><br>
+                  <a *ngIf="!data.tweet_urls">NA</a><br>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data ="data"  data-dismiss="modal">Close</button>
@@ -72,6 +78,33 @@
     <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }" [template]="customLoadingTemplate"></ngx-loading>
   </div>
 </div>
+
+
+ <div [hidden]="showAnalysis == false">
+   <h1 class="text-center text-primary">Tweet Analysis</h1>
+   <div >
+     <div class="row" style="margin-top: 110px;margin-left: 25px">
+       <div class="col-md-1"></div>
+       <div class="col-md-5"><div id="chartContainer" style="height: 370px; width: 100%;"></div></div>
+       <div class="col-md-5"><div id="chartContainer1" style="height: 370px; width: 100%;"></div></div>
+       <div class="col-md-1"></div>
+     </div>
+
+     <div class="row" style="margin-top: 110px;margin-left: 25px">
+       <div class="col-md-1"></div>
+       <div class="col-md-5"><div id="chartContainer2" style="height: 370px; width: 100%;"></div></div>
+       <div class="col-md-5"><div id="chartContainer3" style="height: 370px; width: 100%;"></div></div>
+       <div class="col-md-1"></div>
+     </div>
+
+     <div class="row" style="margin-top: 110px;margin-left: 25px">
+       <div class="col-md-1"></div>
+       <div class="col-md-5"><div id="chartContainer4" style="height: 370px; width: 100%;"></div></div>
+       <div class="col-md-6"></div>
+     </div>
+
+   </div>
+ </div>
 
 
 
