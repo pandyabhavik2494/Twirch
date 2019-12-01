@@ -45,7 +45,7 @@ export class HomeComponent {
 
   ngOnInit(): void {
     this.showTable = false;
-    this.solrUrl = 'http://18.191.130.218:8983';
+    this.solrUrl = 'http://3.134.85.242:8983';
     this.solrCore = 'IRF19P4'
     this.allColumns = [];
     this.displayedColumns = [];
