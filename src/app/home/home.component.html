@@ -3,7 +3,7 @@
     <div class="form-group">
       <h1 class="text-center text-primary">Twirch</h1>
       <div class="input-group-prepend">
-        <input type="text" class="form-control" placeholder="Search Tweets" name="todo" [(ngModel)]="inputString">
+        <input type="text" class="form-control" placeholder="Search Tweets" name="todo" [(ngModel)]="inputString" required/>
         <div class="input-group-text" ><i (click)="addTodo()" routerLink="/results" class="material-icons">search</i></div>
       </div>
     </div>

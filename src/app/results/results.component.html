@@ -14,7 +14,7 @@
       <h1 class="text-center text-primary">Tweet Results</h1>
       <div style="display: block;" class="input-group-prepend">
         <div *ngFor="let data of data.source._value.response.docs;index as rank">
-
+          <div>
           <div class="modal fade" [attr.id]="rank" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
@@ -31,8 +31,10 @@
                   <a *ngIf="data['user.verified'][0] === true">Verfied User <i class="fa fa-check-circle" style="color:#00ACEE"></i></a>
                   <a *ngIf="data['user.verified'][0] === false">Unverified User</a>
                   <br/>
-                  <b>Location:&nbsp;&nbsp;</b><a>{{data["user.location"]}}</a><br/>
-                  <b>Country:&nbsp;&nbsp;</b><a>{{data.country}}</a><br/>
+                  <div *ngIf="data['user.location']"><b>Location: </b><a>{{data["user.location"]}}</a><br/></div>
+                  <div *ngIf="!data['user.location']"><b>Location: </b><a>NA</a><br/></div>
+                  <div *ngIf="data.country !== undefined"><b >Country: </b><a>{{data.country}}</a><br/></div>
+                  <div *ngIf="data.country === undefined"><b>Country: </b><a>NA</a><br/></div>
                   <b>Tweet URL: </b>
                   <a style="text-decoration: underline;color: blue;" href="https://twitter.com/{{data['user.screen_name'][0]}}/status/{{data.id}}" target="_blank">https://twitter.com/{{data["user.screen_name"][0]}}/status/{{data.id}}</a><br>
                   <b>Time Stamp: </b><a>{{data.created_at}}</a><br/>
@@ -48,6 +50,7 @@
               </div>
             </div>
           </div>
+          </div>
 
           <div *ngIf="data.full_text">
           <ul class="list-group">
@@ -62,6 +65,9 @@
             </li>
           </ul>
           </div>
+        </div>
+        <div *ngIf="data === undefined || data.full_text === undefined" style="text-align: center;">
+          <h4>No Data Found</h4>
         </div>
       </div>
     </div>

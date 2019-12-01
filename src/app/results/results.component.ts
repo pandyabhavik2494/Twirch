@@ -3,6 +3,7 @@ import {Location} from '@angular/common';
 import { DataService } from '../data.service';
 import { EventEmitterService } from '../event-emitter.service';
 import * as CanvasJS from '../../assets/canvasjs.min';
+import {HttpErrorResponse} from '@angular/common/http';
 
 @Component({
   selector: 'app-results',
@@ -35,7 +36,10 @@ export class ResultsComponent implements OnInit {
       this.eventEmitterService.subsVar = this.eventEmitterService.
       invokeFirstComponentFunction.subscribe((name: string) => {
         this.showData();
-      });
+      },
+        (err: HttpErrorResponse) => {
+        this.loading = false;
+        });
     }
   }
 
@@ -49,7 +53,7 @@ export class ResultsComponent implements OnInit {
       animationEnabled: true,
       exportEnabled: true,
       title: {
-        text: "Country"
+        text: "Location"
       },
       dataPointWidth: 25,
       data: [{
@@ -73,7 +77,7 @@ export class ResultsComponent implements OnInit {
       animationEnabled: true,
       exportEnabled: true,
       title: {
-        text: "Hashtags"
+        text: "Popular Hashtags"
       },
       dataPointWidth: 25,
       data: [{
@@ -123,7 +127,7 @@ export class ResultsComponent implements OnInit {
       animationEnabled: true,
       exportEnabled: true,
       title: {
-        text: "Verified"
+        text: "User Status"
       },
       dataPointWidth: 25,
       data: [{
@@ -132,20 +136,19 @@ export class ResultsComponent implements OnInit {
         legendText:"India",
         showInLegend: false,
         dataPoints: [
-          {y: this.data.source.value.facet_counts.facet_fields.verified[1], label: this.data.source.value.facet_counts.facet_fields.verified[0] },
-          {y: this.data.source.value.facet_counts.facet_fields.verified[3], label: this.data.source.value.facet_counts.facet_fields.verified[2] },
+          {y: this.data.source.value.facet_counts.facet_fields.verified[1], label: this.data.source.value.facet_counts.facet_fields.verified[0] === 'true' ? 'Verified' : 'Unverified' },
+          {y: this.data.source.value.facet_counts.facet_fields.verified[3], label: this.data.source.value.facet_counts.facet_fields.verified[2] === 'true' ? 'Verified' : 'Unverified' },
         ]
       }
       ]
     });
-
     chart3.render();
 
     const chart4 = new CanvasJS.Chart("chartContainer4", {
       animationEnabled: true,
       exportEnabled: true,
       title: {
-        text: "Verified"
+        text: "User Sentiment"
       },
       dataPointWidth: 25,
       data: [{
