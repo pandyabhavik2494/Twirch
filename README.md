@@ -6,6 +6,16 @@ The WebApp is hosted on an EC2 instance of AWS.
 
 The aim of this project was to build an end-to-end Information Retrival solution involving content ingestion, search, topic categorization, analytics and visualization with focus on user experience. 
 
+**Tech Used :**
+
+• Angular 7
+• Solr
+• Python
+• Google Cloud APIs
+• AWS [EC2]
+
+**Details :**
+
 • The front-end is configurable and can be pointed to any Solr Core. It is configured as a search engine for tweets as of now but it can be made into someting else too! 
 
 • The dataset(tweets) is analysed for the impact of political rhetoric of influential people by monitoring both social and       traditional media, in terms of  sentiment, volume, among others.
@@ -24,21 +34,23 @@ The aim of this project was to build an end-to-end Information Retrival solution
 
 • The ranking  methodology  also  inculcates  the authoritative property  of  the  documents  (tweets) ensuring the tweets by   verified users are displayed first.
 
-• Demo Images :
+
+
+**Demo Images :**
 
 **Home Screen :**
 Here we can see the option to search keywords to find tweets.
 
 ![Twirch1](https://github.com/pandyabhavik2494/Screenshots/blob/master/Twirch1.png)
 
-
+------------------------------------------------------------------------------------------------------------------------------
 **Analysis on all Tweets Part_1 :**
 
 Here we can see the various inferences made from the dataset of tweets.
 
 ![Twirch2](https://github.com/pandyabhavik2494/Screenshots/blob/master/Twirch2.png)
 
-
+------------------------------------------------------------------------------------------------------------------------------
 
 **Analysis on all Tweets Part_2 :**
 
@@ -47,28 +59,28 @@ Some more inferences made from the dataset of tweets.
 
 ![Twirch3](https://github.com/pandyabhavik2494/Screenshots/blob/master/Twirch3.png)
 
-
+------------------------------------------------------------------------------------------------------------------------------
 **Tweet Search Result Screen :**
 Here we see the search results in the form of retrived tweets ranked according to their precision.
 
 ![Twirch4](https://github.com/pandyabhavik2494/Screenshots/blob/master/Twirch4.png)
 
 
-
+------------------------------------------------------------------------------------------------------------------------------
 **Tweet Information Popup :**
 
 We can view various details about a tweet on this popup which is opened by clicking on the tweet.
 
 ![Twirch7](https://github.com/pandyabhavik2494/Screenshots/blob/master/Twirch7.png)
 
-
+------------------------------------------------------------------------------------------------------------------------------
 **Search Result Analysis Part_1 :**
 
 Here we can see the various inferences made from the dataset of tweets which were retrived based on the query.
 
 ![Twirch5](https://github.com/pandyabhavik2494/Screenshots/blob/master/Twirch5.png)
 
-
+------------------------------------------------------------------------------------------------------------------------------
 **Search Result Analysis Part_2 :**
 
 Some more inferences made from the dataset of tweets which were retrived based on the query.
