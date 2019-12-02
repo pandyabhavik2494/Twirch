@@ -37,9 +37,15 @@ This is a search engine for Tweets.
 
 
 
+**CLIENT A :**
+
+![Twirch1](https://github.com/pandyabhavik2494/Screenshots/blob/master/Twirch1.png)
+
+------------------------------------------------------------------------------------------------------------------------------
 #Configuration Notes
 
 This project was build with Angular 7 and Solr and is hosted on an AWS EC2 instance.
+
 
 ** Development server:
 
