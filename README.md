@@ -41,6 +41,25 @@ This is a search engine for Tweets.
 
 ![Twirch1](https://github.com/pandyabhavik2494/Screenshots/blob/master/Twirch1.png)
 
+**CLIENT A :**
+
+![Twirch2](https://github.com/pandyabhavik2494/Screenshots/blob/master/Twirch2.png)
+
+**CLIENT A :**
+
+![Twirch3](https://github.com/pandyabhavik2494/Screenshots/blob/master/Twirch3.png)
+
+**CLIENT A :**
+
+![Twirch4](https://github.com/pandyabhavik2494/Screenshots/blob/master/Twirch4.png)
+
+**CLIENT A :**
+
+![Twirch5](https://github.com/pandyabhavik2494/Screenshots/blob/master/Twirch5.png)
+**CLIENT A :**
+
+![Twirch6](https://github.com/pandyabhavik2494/Screenshots/blob/master/Twirch6.png)
+
 ------------------------------------------------------------------------------------------------------------------------------
 #Configuration Notes
 
