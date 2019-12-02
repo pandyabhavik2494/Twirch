@@ -65,7 +65,7 @@ Some more inferences made from the dataset of tweets.
 
 ------------------------------------------------------------------------------------------------------------------------------
 **Tweet Search Result Screen :**
-Here we see the search results in the form of retrived tweets ranked according to their precision.
+Here we see the search results in the form of retrieved tweets ranked according to their precision.
 
 ![Twirch4](https://github.com/pandyabhavik2494/Screenshots/blob/master/Twirch4.png)
 
@@ -80,14 +80,14 @@ We can view various details about a tweet on this popup which is opened by click
 ------------------------------------------------------------------------------------------------------------------------------
 **Search Result Analysis Part_1 :**
 
-Here we can see the various inferences made from the dataset of tweets which were retrived based on the query.
+Here we can see the various inferences made from the dataset of tweets which were retrieved based on the query.
 
 ![Twirch5](https://github.com/pandyabhavik2494/Screenshots/blob/master/Twirch5.png)
 
 ------------------------------------------------------------------------------------------------------------------------------
 **Search Result Analysis Part_2 :**
 
-Some more inferences made from the dataset of tweets which were retrived based on the query.
+Some more inferences made from the dataset of tweets which were retrieved based on the query.
 
 ![Twirch6](https://github.com/pandyabhavik2494/Screenshots/blob/master/Twirch6.png)
 
