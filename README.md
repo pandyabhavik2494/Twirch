@@ -37,31 +37,31 @@ This is a search engine for Tweets.
 
 
 
-**CLIENT A :**
+**Home Screen :**
 
 ![Twirch1](https://github.com/pandyabhavik2494/Screenshots/blob/master/Twirch1.png)
 
-**CLIENT A :**
+**Analysis on all Tweets :**
 
 ![Twirch2](https://github.com/pandyabhavik2494/Screenshots/blob/master/Twirch2.png)
 
-**CLIENT A :**
+**Analysis on all Tweets :**
 
 ![Twirch3](https://github.com/pandyabhavik2494/Screenshots/blob/master/Twirch3.png)
 
-**CLIENT A :**
+**Tweet Search Result Screen :**
 
 ![Twirch4](https://github.com/pandyabhavik2494/Screenshots/blob/master/Twirch4.png)
 
-**CLIENT A :**
+**Search Result Analysis :**
 
 ![Twirch5](https://github.com/pandyabhavik2494/Screenshots/blob/master/Twirch5.png)
-**CLIENT A :**
+**Search Result Analysis :**
 
 ![Twirch6](https://github.com/pandyabhavik2494/Screenshots/blob/master/Twirch6.png)
 
 ------------------------------------------------------------------------------------------------------------------------------
-#Configuration Notes
+**Configuration Notes**
 
 This project was build with Angular 7 and Solr and is hosted on an AWS EC2 instance.
 
