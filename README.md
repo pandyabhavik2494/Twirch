@@ -41,22 +41,32 @@ This is a search engine for Tweets.
 
 ![Twirch1](https://github.com/pandyabhavik2494/Screenshots/blob/master/Twirch1.png)
 
-**Analysis on all Tweets :**
+
+
+**Analysis on all Tweets Part_1 :**
 
 ![Twirch2](https://github.com/pandyabhavik2494/Screenshots/blob/master/Twirch2.png)
 
-**Analysis on all Tweets :**
+
+
+**Analysis on all Tweets Part_2 :**
 
 ![Twirch3](https://github.com/pandyabhavik2494/Screenshots/blob/master/Twirch3.png)
+
+
 
 **Tweet Search Result Screen :**
 
 ![Twirch4](https://github.com/pandyabhavik2494/Screenshots/blob/master/Twirch4.png)
 
-**Search Result Analysis :**
+
+
+**Search Result Analysis Part_1 :**
 
 ![Twirch5](https://github.com/pandyabhavik2494/Screenshots/blob/master/Twirch5.png)
-**Search Result Analysis :**
+
+
+**Search Result Analysis Part_2 :**
 
 ![Twirch6](https://github.com/pandyabhavik2494/Screenshots/blob/master/Twirch6.png)
 
