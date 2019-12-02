@@ -6,6 +6,7 @@ The WebApp is hosted on an EC2 instance of AWS.
 
 The aim of this project was to build an end-to-end Information Retrival solution involving content ingestion, search, topic categorization, analytics and visualization with focus on user experience. 
 
+------------------------------------------------------------------------------------------------------------------------------
 **Tech Used :**
 
 • Angular 7
@@ -13,7 +14,7 @@ The aim of this project was to build an end-to-end Information Retrival solution
 • Python
 • Google Cloud APIs
 • AWS [EC2]
-
+------------------------------------------------------------------------------------------------------------------------------
 **Details :**
 
 • The front-end is configurable and can be pointed to any Solr Core. It is configured as a search engine for tweets as of now but it can be made into someting else too! 
@@ -34,7 +35,7 @@ The aim of this project was to build an end-to-end Information Retrival solution
 
 • The ranking  methodology  also  inculcates  the authoritative property  of  the  documents  (tweets) ensuring the tweets by   verified users are displayed first.
 
-
+------------------------------------------------------------------------------------------------------------------------------
 
 **Demo Images :**
 
