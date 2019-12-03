@@ -7,11 +7,11 @@ import { Observable } from 'rxjs';
 export class ConfigService implements OnInit {
   config: Config;
   ngOnInit(): void {
-    
+
   }
   constructor(private httpService: HttpClient) {
-   
-   
+
+
      }
 
    getConfig(): Observable<any> {

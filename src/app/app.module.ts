@@ -4,7 +4,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-// import { SearchTablePipe } from './search-table.pipe';
 import { ConfigService } from './config/config.service';
 import { SolrServiceService } from './solr-service.service';
 import { DataService } from './data.service';
@@ -15,7 +14,6 @@ import {EventEmitterService} from './event-emitter.service';
 import { NgxLoadingModule } from 'ngx-loading';
 const appRoutes: Routes = [
   { path: 'results', component: ResultsComponent },
-  { path: 'home', component: HomeComponent },
   { path: '', component: HomeComponent }
 ];
 
