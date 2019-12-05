@@ -34,7 +34,7 @@ export class HomeComponent {
 
   ngOnInit(): void {
     this.showTable = false;
-    this.solrUrl = 'http://3.134.85.242:8983';
+    this.solrUrl = 'http://18.223.135.135:8983';
     this.solrCore = 'IRF19P4'
     this.alertMessage = '';
     this.loading = true;
