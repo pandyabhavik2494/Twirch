@@ -1,6 +1,6 @@
 ## Twirch
 
-This is a search engine for Tweets which is build using Angular 7 and Solr. 
+This is a search engine for Tweets which is build using Angular 7 and Solr.
 The tweets are processed using python scripts and Google Cloud APIs. 
 The WebApp is hosted on an EC2 instance of AWS.  
 
